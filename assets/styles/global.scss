@@ -1,0 +1,48 @@
+// raleway font from googlefonts
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+@font-face {
+  font-family: "SF Alien";
+  src: local("Sf Alien"),
+    url(~assets/fonts/sf-alien-encounters.solid.ttf);
+}
+// variables, mixins, etc
+@import './variables/colors.scss';
+@import './variables/typography.scss';
+body {
+  font-family: var(--tertiary-font);
+  // backgound color changes with mode variable
+  background-color: var(--bg);
+  // text color changes with mode variable
+  color: var(--color);
+  // smooth transition on mode changes
+  transition: background-color 0.3s;
+}
+a {
+  color: var(--color-primary);
+}
+p {
+  line-height: 1.5;
+}
+button {
+  color: var(--color);
+  &:hover {
+    cursor: pointer;
+  }
+}
+input {
+  outline: none;
+}
+.main-button {
+  display: block;
+  padding: 1rem 2rem;
+  background: var(--button-color);
+  color: var(--button-text);
+  border-radius: 0.5rem;
+  transition: 0.2s ease-in-out;
+  &:hover {
+    background-color: var(--button-hover);
+  }
+}
+.nuxt-content a {
+  color: #f36;
+}

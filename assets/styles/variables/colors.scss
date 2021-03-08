@@ -1,0 +1,37 @@
+:root {
+  --color: #000;
+  --color-primary: #f36;
+  --color-secondary: #333;
+  --bg: #fff;
+  --bg-secondary: #fff;
+  --border-color: #000;
+  --border-color-secondary: #a7a7a7;
+  --button-color: #f36;
+  --button-text: white;
+  --button-hover: rgb(161, 20, 49);
+  --shadow-color: black;
+  --overlay-color: hsla(0, 0%, 10%, 0.85);
+  --overlay-color-hover: rgba(75, 75, 75, 0.3);
+  --primary-font: 'SF Alien', serif;
+  --secondary-font: 'Raleway', serif;
+}
+.dark-mode {
+  --color: #fff;
+  --color-primary: #fff;
+  --color-secondary: #fff;
+  --bg: #151110;
+  --bg-secondary: #000;
+  --border-color: #fff;
+}
+.light-mode {
+  --color: #151110;
+  --color-primary: #000;
+  --color-secondary: #1a1a1a;
+  --bg: #fff;
+  --bg-secondary: #fff;
+  --border-color: #000;
+}
+
+.primary-color {
+  color: #f36;
+}

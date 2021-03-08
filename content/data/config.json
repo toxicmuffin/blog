@@ -1,0 +1,44 @@
+{
+  "category": [
+    {
+      "title": "Front End Development",
+      "image": "",
+      "path": "front-end-development"
+    },
+    {
+      "title": "Photography",
+      "image": "",
+      "path": "photography"
+    },
+    {
+      "title": "Fauna & Flora",
+      "image": "",
+      "path": "fauna-flora"
+    },
+    {
+      "title": "Cryptocurrency",
+      "image": "",
+      "path": "cryptocurrency"
+    },
+    {
+      "title": "Video Games",
+      "image": "",
+      "path": "video-games"
+    }
+  ],
+  "tag": [
+    "Design",
+    "Development",
+    "Front End Development",
+    "Deployment",
+    "JAMStack",
+    "Photography",
+    "Fish",
+    "Plants",
+    "Planted Tanks",
+    "Cryptocurrency",
+    "Video Games",
+    "Technical Dive",
+    "Tutorial"
+  ]
+}
