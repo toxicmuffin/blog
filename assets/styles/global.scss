@@ -1,5 +1,5 @@
 // raleway font from googlefonts
-@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
 @font-face {
   font-family: "SF Alien";
   src: local("Sf Alien"),
@@ -101,8 +101,6 @@ input {
 }
 .nuxt-content {
   h1,h2,h3,h4,h5,h6 {
-    @apply font-black tracking-wide;
-
     font-family: 'Raleway', serif;
     letter-spacing: 0.25rem;
   }
