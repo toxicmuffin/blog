@@ -3,7 +3,7 @@
     <NuxtLink to="/" class="footer-heading heading tracking-widest">
       Kai Asuncion
     </NuxtLink>
-    <NuxtLink to="/about" class="footer-contact heading sub-heading">
+    <NuxtLink to="/about" class="footer-contact sub-heading">
       Contact
     </NuxtLink>
     <FooterNav />
@@ -31,9 +31,6 @@ footer {
   .footer-heading {
     font-size: 2rem;
     margin-bottom: 0.5rem;
-  }
-  .sub-heading {
-    font-family: 'Raleway', serif;
   }
   .footer-contact {
     font-size: 1.5rem;

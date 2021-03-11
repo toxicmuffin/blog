@@ -11,7 +11,7 @@
             :key="topics.title"
             class="ml-6"
           >
-            <h2>
+            <h2 class="sub-heading">
               <NuxtLink :to="`categories/${topics.path}`">{{
                 topics.title
               }}</NuxtLink>

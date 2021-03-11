@@ -20,7 +20,7 @@
   --overlay-color: hsla(0, 0%, 10%, 0.85);
   --overlay-color-hover: rgba(75, 75, 75, 0.3);
   --primary-font: 'SF Alien', serif;
-  --secondary-font: 'Raleway', serif;
+  --secondary-font: 'Raleway', sans-serif;
 }
 .dark-mode {
   --color: #fff;
@@ -61,7 +61,7 @@ h2 {
   }
 }
 .sub-heading {
-  font-family: 'Raleway', serif;
+  font-family: 'Raleway', sans-serif;
   letter-spacing: 0.5rem;
 }
 body {
