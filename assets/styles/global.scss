@@ -61,7 +61,7 @@ h2 {
   }
 }
 .sub-heading {
-  font-family: var(--secondary-font);
+  font-family: 'Raleway', serif;
   letter-spacing: 0.5rem;
 }
 body {
@@ -103,7 +103,7 @@ input {
   h1,h2,h3,h4,h5,h6 {
     @apply font-black tracking-wide;
 
-    font-family: var(--secondary-font);
+    font-family: 'Raleway', serif;
     letter-spacing: 0.25rem;
   }
   h1 {
