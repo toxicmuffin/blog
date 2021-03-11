@@ -1,3 +1,13 @@
+---
+title: Cryptocurrency in a Nutshell
+description: Cryptocurrency briefly explained and other aspects
+image: "🥜"
+author: Kai
+tags:
+- Featured
+- Cryptocurrency
+- Intro
+---
 # Your Personal Philosophy of Value
 If you don't believe there is any value in cryptocurrency, you probably shouldn't throw money at it. Always do your own research and come to your own conclusions. Invest at your own risk and with what you are willing to lose. Make sure you believe there is value in something you are investing in. Remember, this is your money, you earned it and be smart with it.
 

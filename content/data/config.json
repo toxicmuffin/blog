@@ -2,28 +2,41 @@
   "category": [
     {
       "title": "Front End Development",
-      "image": "",
       "path": "front-end-development"
     },
     {
       "title": "Photography",
-      "image": "",
       "path": "photography"
     },
     {
-      "title": "Fauna & Flora",
-      "image": "",
-      "path": "fauna-flora"
+      "title": "Cryptocurrency",
+      "path": "cryptocurrency"
+    }
+  ],
+  "categories": [
+    {
+      "title": "Front End Development",
+      "image": "⚙",
+      "path": "categories/front-end-development",
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis eveniet, repellendus eligendi id rerum fugit debitis explicabo quia modi, ipsam non iusto veritatis totam possimus laboriosam sed ipsa sapiente reprehenderit."
+    },
+    {
+      "title": "Photography",
+      "image": "📸",
+      "path": "categories/photography",
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis eveniet, repellendus eligendi id rerum fugit debitis explicabo quia modi, ipsam non iusto veritatis totam possimus laboriosam sed ipsa sapiente reprehenderit."
     },
     {
       "title": "Cryptocurrency",
-      "image": "",
-      "path": "cryptocurrency"
+      "image": "💎",
+      "path": "categories/cryptocurrency",
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis eveniet, repellendus eligendi id rerum fugit debitis explicabo quia modi, ipsam non iusto veritatis totam possimus laboriosam sed ipsa sapiente reprehenderit."
     },
     {
-      "title": "Video Games",
-      "image": "",
-      "path": "video-games"
+      "title": "Miscellaneous",
+      "image": "🎮",
+      "path": "categories/miscellaneous",
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis eveniet, repellendus eligendi id rerum fugit debitis explicabo quia modi, ipsam non iusto veritatis totam possimus laboriosam sed ipsa sapiente reprehenderit."
     }
   ],
   "tag": [
@@ -39,6 +52,7 @@
     "Cryptocurrency",
     "Video Games",
     "Technical Dive",
-    "Tutorial"
+    "Tutorial",
+    "Intro"
   ]
 }

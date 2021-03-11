@@ -34,6 +34,9 @@
     width: 100%;
     a {
       margin: 1rem 0;
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 }

@@ -26,6 +26,7 @@ h2 {
     @apply font-black tracking-wide;
 
     font-family: var(--secondary-font);
+    letter-spacing: 0.25rem;
   }
   h1 {
     @apply text-4xl pt-8;

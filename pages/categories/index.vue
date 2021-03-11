@@ -1,7 +1,7 @@
 <template>
   <div class="splash-container">
     <ul>
-      <li v-for="topics in categories.category" :key="topics.title">
+      <li v-for="topics in categories.categories" :key="topics.title">
         {{ topics.title }}
       </li>
     </ul>

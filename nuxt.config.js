@@ -13,7 +13,17 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: 'favicon/favicon.ico' },
+      {
+        rel: 'apple-touch-icon',
+        sizes: '180x180',
+        href: 'favicon/apple-touch-icon.png',
+      },
+      { rel: 'icon', type: 'image/png', href: 'favicon/favicon-32x32.png' },
+      { rel: 'icon', type: 'image/png', href: 'favicon/favicon-16x16.png' },
+      { rel: 'manifest', href: 'favicon/site.webmanifest' },
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -42,7 +52,10 @@ export default {
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
   ],
-
+  privateRuntimeConfig: {
+    SITE_RECAPTCHA_KEY: process.env.SITE_RECAPTCHA_KEY,
+    SITE_RECAPTCHA_SECRET: process.env.SITE_RECAPTCHA_SECRET,
+  },
   // Content module configuration: https://go.nuxtjs.dev/config-content
   content: {},
 

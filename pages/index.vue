@@ -1,24 +1,27 @@
 <template>
-  <div class="splash-container">
-    <div class="w-full transform lg:-rotate-12">
-      <h1>Hello,</h1>
-      <h1>Welcome To My&nbsp;Blog</h1>
-      <Rainbow class="mb-2" />
-      <ul class="flex flex-wrap justify-center list-disc">
-        <li v-for="topics in categories.category" :key="topics.title">
-          <h2>
-            <NuxtLink :to="`categories/${topics.path}`">{{
-              topics.title
-            }}</NuxtLink>
-          </h2>
-        </li>
-      </ul>
+  <div>
+    <div class="splash-container">
+      <div class="w-full mb-6 transform lg:-rotate-12 lg:mb-20">
+        <h1>Hello,</h1>
+        <h1>Welcome To My&nbsp;Blog</h1>
+        <Rainbow class="mb-2" />
+        <ul class="flex flex-wrap justify-center list-disc">
+          <li
+            v-for="topics in categories.category"
+            :key="topics.title"
+            class="ml-6"
+          >
+            <h2>
+              <NuxtLink :to="`categories/${topics.path}`">{{
+                topics.title
+              }}</NuxtLink>
+            </h2>
+          </li>
+        </ul>
+      </div>
     </div>
-    <ul>
-      <li v-for="topics in categories.category" :key="topics.title">
-        {{ topics.title }}
-      </li>
-    </ul>
+    <PostList :post="posts" />
+    <ItemList :item="categories.categories" />
   </div>
 </template>
 
@@ -28,7 +31,8 @@ import Vue from 'vue'
 export default Vue.extend({
   async asyncData({ $content }) {
     const categories = await $content('data/config').fetch()
-    return { categories }
+    const posts = await $content('blog', { deep: true }).only(['title', 'path', 'image', 'description', 'createdAt' ]).fetch()
+    return { categories, posts }
   },
 })
 </script>
@@ -36,7 +40,7 @@ export default Vue.extend({
 <style lang="scss" scoped>
 @import url('~/assets/styles/variables/colors.scss');
 .splash-container {
-  min-height: 100vh;
+  min-height: 90vh;
   width: 100%;
   display: flex;
   flex-flow: column nowrap;
@@ -46,7 +50,6 @@ export default Vue.extend({
   letter-spacing: 0.35rem;
 }
 li {
-  @apply ml-6;
   h2 {
     font-family: var(--secondary-font);
   }

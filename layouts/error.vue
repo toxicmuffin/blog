@@ -1,7 +1,7 @@
 <template>
-  <div class="error-container">
+  <div class="flex flex-col items-center justify-center text-center">
     <div>
-      <h1 class="text-3xl">Error: {{ error.statusCode }}</h1>
+      <h1>Error: {{ error.statusCode }}</h1>
       <h1>{{ error.message }}</h1>
       <h2 class="hover:underline text-2xl">
         <NuxtLink to="/" class="primary-color">Return Home</NuxtLink>
@@ -22,12 +22,3 @@ export default Vue.extend({
   },
 })
 </script>
-
-<style lang="scss" scoped>
-.error-container {
-  display: grid;
-  align-items: center;
-  text-align: center;
-  font-size: 1.5rem;
-}
-</style>

@@ -1,11 +1,12 @@
 <template>
-  <div class="w-10/12 m-auto max-w-screen-md">
+  <div>
     <nuxt-content :document="blogPost" />
   </div>
 </template>
 
 <script lang="ts">
 export default {
+  layout: 'blogPost',
   async asyncData({ $content, params, error }) {
     const path = `/${params.pathMatch || 'index'}`
     console.log(path)
