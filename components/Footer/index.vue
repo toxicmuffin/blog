@@ -33,7 +33,7 @@ footer {
     margin-bottom: 0.5rem;
   }
   .sub-heading {
-    font-family: var(--secondary-font);
+    font-family: 'Raleway', serif;
   }
   .footer-contact {
     font-size: 1.5rem;

@@ -1,5 +1,5 @@
 <template>
-  <div class="h-screen flex flex-col items-center justify-center">
+  <div class="flex flex-col items-center justify-center">
     <h1 class="mb-6">Categories</h1>
     <ItemList :item="categories.categories" />
   </div>
