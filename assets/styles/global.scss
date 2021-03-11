@@ -5,9 +5,65 @@
   src: local("Sf Alien"),
     url(~assets/fonts/sf-alien-encounters.solid.ttf);
 }
-// variables, mixins, etc
-@import './variables/colors.scss';
-@import './variables/typography.scss';
+:root {
+  --color: #000;
+  --color-primary: #f36;
+  --color-secondary: #333;
+  --bg: #fff;
+  --bg-secondary: #fff;
+  --border-color: #000;
+  --border-color-secondary: #a7a7a7;
+  --button-color: #f36;
+  --button-text: white;
+  --button-hover: rgb(161, 20, 49);
+  --shadow-color: black;
+  --overlay-color: hsla(0, 0%, 10%, 0.85);
+  --overlay-color-hover: rgba(75, 75, 75, 0.3);
+  --primary-font: 'SF Alien', serif;
+  --secondary-font: 'Raleway', serif;
+}
+.dark-mode {
+  --color: #fff;
+  --color-primary: #fff;
+  --color-secondary: #fff;
+  --bg: #151110;
+  --bg-secondary: #000;
+  --border-color: #fff;
+}
+.light-mode {
+  --color: #151110;
+  --color-primary: #000;
+  --color-secondary: #1a1a1a;
+  --bg: #fff;
+  --bg-secondary: #fff;
+  --border-color: #000;
+}
+.primary-color {
+  color: #f36;
+}
+h1,h2,h3,h4,h5,h6,.heading {
+  color: var(--color);
+  font-family: var(--primary-font);
+}
+h1 {
+  @apply text-3xl;
+  @screen md {
+    @apply text-5xl;
+  }
+}
+h2 {
+  @apply text-base;
+  @screen md {
+    @apply text-xl;
+  }
+  @screen lg {
+    @apply text-2xl;
+  }
+}
+.sub-heading {
+  font-family: var(--secondary-font);
+  letter-spacing: 0.5rem;
+}
 body {
   font-family: var(--tertiary-font);
   // backgound color changes with mode variable
@@ -43,6 +99,41 @@ input {
     background-color: var(--button-hover);
   }
 }
-.nuxt-content a {
-  color: #f36;
+.nuxt-content {
+  h1,h2,h3,h4,h5,h6 {
+    @apply font-black tracking-wide;
+
+    font-family: var(--secondary-font);
+    letter-spacing: 0.25rem;
+  }
+  h1 {
+    @apply text-4xl pt-8;
+  }
+  h2 {
+    @apply text-3xl;
+  }
+  h3 {
+    @apply text-2xl;
+  }
+  h4 {
+    @apply text-xl;
+  }
+  p {
+    @apply mb-8 text-xl;
+    @screen lg {
+      @apply text-2xl;
+    }
+  }
+  ul {
+    @apply pb-2;
+    li {
+      @apply list-disc ml-8;
+      p {
+        @apply mb-2;
+      }
+    }
+  }
+  a {
+    color: #f36;
+  }
 }

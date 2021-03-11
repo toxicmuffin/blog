@@ -32,6 +32,9 @@ footer {
     font-size: 2rem;
     margin-bottom: 0.5rem;
   }
+  .sub-heading {
+    font-family: var(--secondary-font);
+  }
   .footer-contact {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;

@@ -51,7 +51,6 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-@import url('~/assets/styles/variables/colors.scss');
 .splash-container {
   min-height: 90vh;
   width: 100%;
