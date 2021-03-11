@@ -20,8 +20,12 @@
         </ul>
       </div>
     </div>
-    <PostList :post="posts" />
-    <ItemList :item="categories.categories" />
+    <h2 class="text-center text-4xl mb-8">New Posts</h2>
+    <PostList :post="posts" class="mb-16" />
+    <h2 class="text-center text-4xl mb-8">Categories</h2>
+    <ItemList :item="categories.categories" class="mb-16" />
+    <h2 class="text-center text-4xl mb-8">Featured Posts</h2>
+    <PostList :post="featuredPosts" class="mb-16" />
   </div>
 </template>
 
@@ -31,8 +35,17 @@ import Vue from 'vue'
 export default Vue.extend({
   async asyncData({ $content }) {
     const categories = await $content('data/config').fetch()
-    const posts = await $content('blog', { deep: true }).only(['title', 'path', 'image', 'description', 'createdAt' ]).fetch()
-    return { categories, posts }
+    const posts = await $content('blog', { deep: true })
+      .only(['title', 'path', 'image', 'description', 'createdAt'])
+      .limit(4)
+      .sortBy('createdAt', 'desc')
+      .fetch()
+    const featuredPosts = await $content('blog', { deep: true })
+      .where({ tags: { $contains: 'Featured' } })
+      .only(['title', 'path', 'image', 'description', 'createdAt'])
+      .limit(8)
+      .fetch()
+    return { categories, posts, featuredPosts }
   },
 })
 </script>

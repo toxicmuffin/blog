@@ -3,14 +3,14 @@
     <li
       v-for="content in item"
       :key="content.title"
-      class="lg:flex items-center mx-3 mb-6 w-10/12 lg:w-5/12 p-4 cursor-pointer"
+      class="mx-3 mb-6 w-10/12 lg:w-5/12 p-4 cursor-pointer"
     >
-      <NuxtLink :to="content.path">
+      <NuxtLink :to="content.path" class="lg:flex items-center">
         <p class="text-5xl text-center md:text-left md:mr-6">
           {{ content.image }}
         </p>
         <div>
-          <h2 class="text-2xl font-bold">{{ content.title }}</h2>
+          <h2 class="text-2xl font-bold tracking-wider">{{ content.title }}</h2>
           <p>{{ content.description }}</p>
         </div>
       </NuxtLink>

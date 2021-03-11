@@ -1,10 +1,7 @@
 <template>
-  <div class="splash-container">
-    <ul>
-      <li v-for="topics in categories.categories" :key="topics.title">
-        {{ topics.title }}
-      </li>
-    </ul>
+  <div class="h-screen flex flex-col items-center justify-center">
+    <h1 class="mb-6">Categories</h1>
+    <ItemList :item="categories.categories" />
   </div>
 </template>
 
@@ -16,24 +13,40 @@ export default Vue.extend({
     const categories = await $content('data/config').fetch()
     return { categories }
   },
+  head() {
+    return {
+      title: 'Categories | Kai Asuncion',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: '',
+        },
+        {
+          hid: 'description',
+          name: 'description',
+          content: '',
+        },
+        // Open Graph
+        { hid: 'og:title', property: 'og:title', content: '' },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: '',
+        },
+        // Twitter Card
+        {
+          hid: 'twitter:title',
+          name: 'twitter:title',
+          content: '',
+        },
+        {
+          hid: 'twitter:description',
+          name: 'twitter:description',
+          content: '',
+        },
+      ],
+    }
+  },
 })
 </script>
-
-<style lang="scss" scoped>
-@import url('~/assets/styles/variables/colors.scss');
-.splash-container {
-  min-height: 100vh;
-  width: 100%;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  text-align: center;
-  overflow: hidden;
-}
-li {
-  @apply ml-6;
-  h2 {
-    font-family: var(--secondary-font);
-  }
-}
-</style>

@@ -1,7 +1,7 @@
 <template>
   <div>
+    <h1 class="mb-4 p-4 text-center">{{ CatPath }}</h1>
     <PostList :post="posts" />
-    {{ category }}
   </div>
 </template>
 
@@ -17,7 +17,7 @@ export default Vue.extend({
       .catch(() => {
         error({ statusCode: 404, message: 'Page not found' })
       })
-    return { posts }
+    return { posts, CatPath }
   },
 })
 </script>
@@ -25,8 +25,5 @@ export default Vue.extend({
 <style scoped>
 h1 {
   text-align: center;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  box-shadow: 0 0.25rem var(--border-color);
 }
 </style>

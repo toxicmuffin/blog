@@ -1,16 +1,16 @@
 <template>
-  <ul class="flex flex-wrap justify-center flex-row">
+  <ul class="flex flex-wrap items-center justify-center flex-row">
     <li
       v-for="content in post"
       :key="content.title"
-      class="lg:flex items-center mx-3 mb-6 w-10/12 lg:w-5/12 p-4 cursor-pointer"
+      class="mx-3 mb-6 w-10/12 lg:w-5/12 p-4 cursor-pointer"
     >
-      <NuxtLink :to="content.path">
+      <NuxtLink :to="content.path" class="lg:flex items-center">
         <p class="text-5xl text-center md:text-left md:mr-6">
           {{ content.image }}
         </p>
         <div>
-          <h2 class="text-2xl font-bold">{{ content.title }}</h2>
+          <h2 class="text-2xl font-bold tracking-wider">{{ content.title }}</h2>
           <p>{{ content.description }}</p>
           <p class="text-xs">{{ formatDate(content.createdAt) }}</p>
         </div>
@@ -30,7 +30,7 @@ export default Vue.extend({
     },
   },
   methods: {
-    formatDate(date) {
+    formatDate(date: string) {
       const options = { year: 'numeric', month: 'long', day: 'numeric' }
       return new Date(date).toLocaleDateString('en', options)
     }
