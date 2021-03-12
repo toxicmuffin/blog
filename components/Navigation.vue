@@ -1,6 +1,6 @@
 <template>
   <nav :class="{ 'navbar--hidden': !showNavBar }">
-    <NuxtLink class="brand-logo" to="/">
+    <NuxtLink class="brand-logo" aria-label="Logo - Home link" to="/">
       <Logo />
     </NuxtLink>
     <button

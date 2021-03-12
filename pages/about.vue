@@ -23,7 +23,7 @@
     </div>
     <form
       name="contact"
-      action="/sent"
+      action="/sent/"
       method="POST"
       netlify-honeypot="bot-field"
       data-netlify-recaptcha="true"

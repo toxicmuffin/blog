@@ -1,17 +1,21 @@
 <template>
   <div class="footer-list-container">
     <ul class="footer-list">
-      <NuxtLink to="/">Home</NuxtLink>
-      <NuxtLink to="/categories">Categories</NuxtLink>
-      <NuxtLink to="/about">About</NuxtLink>
+      <li><NuxtLink to="/">Home</NuxtLink></li>
+      <li><NuxtLink to="/categories">Categories</NuxtLink></li>
+      <li><NuxtLink to="/about">About</NuxtLink></li>
     </ul>
     <span class="vertical-line"></span>
     <ul class="footer-list">
-      <NuxtLink to="/categories/front-end-development">
-        Front End Development
-      </NuxtLink>
-      <NuxtLink to="/categories/photography">Photography</NuxtLink>
-      <NuxtLink to="/categories/cryptocurrency">Cryptocurrency</NuxtLink>
+      <li>
+        <NuxtLink to="/categories/front-end-development">
+          Front End Development
+        </NuxtLink>
+      </li>
+      <li><NuxtLink to="/categories/photography">Photography</NuxtLink></li>
+      <li>
+        <NuxtLink to="/categories/cryptocurrency">Cryptocurrency</NuxtLink>
+      </li>
     </ul>
   </div>
 </template>

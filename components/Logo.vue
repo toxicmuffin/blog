@@ -11,6 +11,7 @@
     style="enable-background: new 0 0 216.4 75.3"
     xml:space="preserve"
     class="logo-appear h-full"
+    alt="logo"
   >
     <g class="st0">
       <path

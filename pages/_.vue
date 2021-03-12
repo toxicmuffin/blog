@@ -8,6 +8,7 @@
       :ttr="blogPost.body"
     />
     <nuxt-content :document="blogPost" />
+    <ScrollTop />
   </div>
 </template>
 

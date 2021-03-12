@@ -99,10 +99,12 @@ input {
     background-color: var(--button-hover);
   }
 }
+// markdown typography & styles
 .nuxt-content {
   h1,h2,h3,h4,h5,h6 {
-    font-family: 'Raleway', serif;
+    font-family: 'Raleway', sans-serif;
     letter-spacing: 0.25rem;
+    font-weight: 700;
   }
   h1 {
     @apply text-4xl pt-8;
@@ -133,5 +135,8 @@ input {
   }
   a {
     color: #f36;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
