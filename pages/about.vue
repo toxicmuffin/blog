@@ -63,40 +63,6 @@ import Vue from 'vue'
 export default Vue.extend({
   head: {
     title: 'About | Kai Asuncion',
-    meta: [
-      {
-        hid: 'description',
-        name: 'description',
-        content: '',
-      },
-      {
-        hid: 'description',
-        name: 'description',
-        content: '',
-      },
-      // Open Graph
-      {
-        hid: 'og:title',
-        property: 'og:title',
-        content: '',
-      },
-      {
-        hid: 'og:description',
-        property: 'og:description',
-        content: '',
-      },
-      // Twitter Card
-      {
-        hid: 'twitter:title',
-        name: 'twitter:title',
-        content: '',
-      },
-      {
-        hid: 'twitter:description',
-        name: 'twitter:description',
-        content: '',
-      },
-    ],
     script: [{ src: 'https://www.google.com/recaptcha/api.js' }],
   },
 })
