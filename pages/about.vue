@@ -44,10 +44,10 @@
         required
       ></textarea>
       <p class="hidden">
-        <label class="hidden">
+        <label for="bot-field" class="hidden">
           Don’t fill this out if you’re human:
-          <input name="bot-field" />
         </label>
+        <input name="bot-field" class="hidden"/>
       </p>
       <recaptcha class="mb-6" />
       <button id="send-it" type="submit">Send</button>
