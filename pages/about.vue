@@ -26,6 +26,7 @@
       action="/sent/"
       method="POST"
       netlify-honeypot="bot-field"
+      data-netlify-recaptcha="true"
       data-netlify="true"
     >
       <input type="hidden" name="contact-form" value="contact" />
@@ -45,7 +46,8 @@
         Don’t fill this out if you’re human:
       </label>
       <input name="bot-field" class="hidden" />
-      <recaptcha class="mb-6" />
+      <!-- <recaptcha class="mb-6" /> -->
+      <div data-netlify-recaptcha="true"></div>
       <button id="send-it" type="submit">Send</button>
     </form>
   </div>
