@@ -3,7 +3,7 @@
     <ul class="footer-list">
       <li><NuxtLink to="/">Home</NuxtLink></li>
       <li><NuxtLink to="/categories">Categories</NuxtLink></li>
-      <li><NuxtLink to="/about">About</NuxtLink></li>
+      <li><a href="/about">About</a></li>
     </ul>
     <span class="vertical-line"></span>
     <ul class="footer-list">

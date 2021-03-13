@@ -3,9 +3,7 @@
     <NuxtLink to="/" class="footer-heading heading tracking-widest">
       Kai Asuncion
     </NuxtLink>
-    <NuxtLink to="/about" class="footer-contact sub-heading">
-      Contact
-    </NuxtLink>
+    <a href="/about" class="footer-contact sub-heading"> Contact </a>
     <FooterNav />
     <DarkMode />
     <p class="copy-place-holder">Kai Asuncion 2021</p>

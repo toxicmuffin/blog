@@ -24,7 +24,7 @@
         <NuxtLink to="/categories" class="nav-item">Categories</NuxtLink>
       </li>
       <li @click="closeBurger()">
-        <NuxtLink to="/about" class="nav-item">About</NuxtLink>
+        <a href="/about" class="nav-item">About</a>
       </li>
     </ul>
   </nav>
