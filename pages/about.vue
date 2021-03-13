@@ -43,12 +43,10 @@
         rows="10"
         required
       ></textarea>
-      <p class="hidden">
-        <label for="bot-field" class="hidden">
-          Don’t fill this out if you’re human:
-        </label>
-        <input name="bot-field" class="hidden"/>
-      </p>
+      <label for="bot-field" class="hidden">
+        Don’t fill this out if you’re human:
+      </label>
+      <input name="bot-field" class="hidden" />
       <recaptcha class="mb-6" />
       <button id="send-it" type="submit">Send</button>
     </form>
