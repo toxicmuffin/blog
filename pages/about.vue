@@ -28,7 +28,6 @@
       netlify-honeypot="bot-field"
       data-netlify-recaptcha="true"
       data-netlify="true"
-      @submit.prevent="onSubmit"
     >
       <input type="hidden" name="contact-form" value="contact" />
       <label for="person-name">Name</label>
@@ -42,13 +41,13 @@
         cols="30"
         rows="10"
         required
-      ></textarea>
+      />
       <label for="bot-field" class="hidden">
         Don’t fill this out if you’re human:
       </label>
       <input name="bot-field" class="hidden" />
       <recaptcha class="mb-6" />
-      <button id="send-it" type="submit">Send</button>
+      <button id="send-it" type="submit" @click="onSubmit">Send</button>
     </form>
   </div>
 </template>
@@ -59,18 +58,20 @@ export default Vue.extend({
   head: {
     title: 'About | Kai Asuncion',
   },
-  async onSubmit() {
-    try {
-      const token = await this.$recaptcha.getResponse()
-      console.log('ReCaptcha token:', token)
+  methods: {
+    async onSubmit() {
+      try {
+        const token = await this.$recaptcha.getResponse()
+        console.log('ReCaptcha token:', token)
 
-      // send token to server alongside your form data
+        // send token to server alongside your form data
 
-      // at the end you need to reset recaptcha
-      await this.$recaptcha.reset()
-    } catch (error) {
-      console.log('Login error:', error)
-    }
+        // at the end you need to reset recaptcha
+        await this.$recaptcha.reset()
+      } catch (error) {
+        console.log('error:', error)
+      }
+    },
   },
 })
 </script>
