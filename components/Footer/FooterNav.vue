@@ -36,10 +36,12 @@
     flex-flow: column nowrap;
     align-items: center;
     width: 100%;
-    a {
+    li {
       margin: 1rem 0;
-      &:hover {
-        text-decoration: underline;
+      a {
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
   }
