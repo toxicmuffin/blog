@@ -28,6 +28,7 @@
       netlify-honeypot="bot-field"
       data-netlify-recaptcha="true"
       data-netlify="true"
+      @submit.prevent="onSubmit"
     >
       <input type="hidden" name="contact-form" value="contact" />
       <label for="person-name">Name</label>
@@ -59,6 +60,19 @@ import Vue from 'vue'
 export default Vue.extend({
   head: {
     title: 'About | Kai Asuncion',
+  },
+  async onSubmit() {
+    try {
+      const token = await this.$recaptcha.getResponse()
+      console.log('ReCaptcha token:', token)
+
+      // send token to server alongside your form data
+
+      // at the end you need to reset recaptcha
+      await this.$recaptcha.reset()
+    } catch (error) {
+      console.log('Login error:', error)
+    }
   },
 })
 </script>

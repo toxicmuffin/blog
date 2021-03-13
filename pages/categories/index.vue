@@ -1,7 +1,9 @@
 <template>
   <div class="flex flex-col items-center justify-center">
     <h1 class="mb-6">Categories</h1>
-    <ItemList :item="categories.categories" />
+    <ItemList :item="categories.categories" class="mb-20" />
+    <h2 class="text-center text-4xl mb-8">Featured Posts</h2>
+    <PostList :post="featuredPosts" class="mb-16" />
   </div>
 </template>
 
@@ -11,7 +13,12 @@ import Vue from 'vue'
 export default Vue.extend({
   async asyncData({ $content }) {
     const categories = await $content('data/config').fetch()
-    return { categories }
+    const featuredPosts = await $content('blog', { deep: true })
+      .where({ tags: { $contains: 'Featured' } })
+      .only(['title', 'path', 'image', 'description', 'createdAt'])
+      .sortBy('createdAt', 'desc')
+      .fetch()
+    return { categories, featuredPosts }
   },
   head() {
     return {
