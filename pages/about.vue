@@ -27,6 +27,7 @@
       method="POST"
       netlify-honeypot="bot-field"
       data-netlify="true"
+      @submit.prevent="onSubmit"
     >
       <input type="hidden" name="contact-form" value="contact" />
       <label for="person-name">Name</label>
@@ -40,13 +41,13 @@
         cols="30"
         rows="10"
         required
-      />
+      ></textarea>
       <label for="bot-field" class="hidden">
         Don’t fill this out if you’re human:
       </label>
       <input name="bot-field" class="hidden" />
       <recaptcha class="mb-6" />
-      <button id="send-it" type="submit" @click="onSubmit">Send</button>
+      <button id="send-it" type="submit">Send</button>
     </form>
   </div>
 </template>
