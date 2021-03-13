@@ -28,7 +28,6 @@
       netlify-honeypot="bot-field"
       data-netlify-recaptcha="true"
       data-netlify="true"
-      @submit.prevent="onSubmit"
     >
       <input type="hidden" name="contact-form" value="contact" />
       <label for="person-name">Name</label>

@@ -1,0 +1,21 @@
+<form
+name="contact"
+action="/sent/"
+method="POST"
+netlify-honeypot="bot-field"
+data-netlify-recaptcha="true"
+data-netlify="true"
+>
+<input type="hidden" name="contact-form" value="contact" />
+<input id="name-field" type="text" name="person-name" required />
+<input id="email-field" type="email" name="email" required />
+<textarea
+  id="message-field"
+  name="message"
+  cols="30"
+  rows="10"
+  required
+></textarea>
+<input name="bot-field" class="hidden" />
+<button id="send-it" type="submit">Send</button>
+</form>
