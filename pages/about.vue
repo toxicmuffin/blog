@@ -26,6 +26,7 @@
       action="/sent/"
       method="POST"
       netlify-honeypot="bot-field"
+      data-netlify-recaptcha="true"
       data-netlify="true"
       @submit.prevent="onSubmit"
     >
