@@ -59,21 +59,6 @@ export default Vue.extend({
   head: {
     title: 'About | Kai Asuncion',
   },
-  methods: {
-    async onSubmit() {
-      try {
-        const token = await this.$recaptcha.getResponse()
-        console.log('ReCaptcha token:', token)
-
-        // send token to server alongside your form data
-
-        // at the end you need to reset recaptcha
-        await this.$recaptcha.reset()
-      } catch (error) {
-        console.log('error:', error)
-      }
-    },
-  },
 })
 </script>
 
