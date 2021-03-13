@@ -26,6 +26,7 @@
       action="/sent/"
       method="POST"
       netlify-honeypot="bot-field"
+      data-netlify-recaptcha="true"
       data-netlify="true"
     >
       <input type="hidden" name="contact-form" value="contact" />
@@ -47,11 +48,7 @@
           <input name="bot-field" />
         </label>
       </p>
-      <div data-netlify-recaptcha="true"></div>
-      <div
-        class="g-recaptcha mb-6"
-        :data-sitekey="$config.SITE_RECAPTCHA_KEY"
-      />
+      <recaptcha class="mb-6" />
       <button id="send-it" type="submit">Send</button>
     </form>
   </div>
@@ -62,7 +59,6 @@ import Vue from 'vue'
 export default Vue.extend({
   head: {
     title: 'About | Kai Asuncion',
-    script: [{ src: 'https://www.google.com/recaptcha/api.js' }],
   },
 })
 </script>
