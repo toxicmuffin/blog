@@ -29,7 +29,7 @@
       data-netlify-recaptcha="true"
       data-netlify="true"
     >
-      <input type="hidden" name="contact-form" value="contact" />
+      <input type="hidden" name="form-name" value="contact" />
       <label for="person-name">Name</label>
       <input id="name-field" type="text" name="person-name" required />
       <label for="email">Email</label>
