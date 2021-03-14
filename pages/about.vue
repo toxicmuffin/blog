@@ -46,8 +46,7 @@
         Don’t fill this out if you’re human:
       </label>
       <input name="bot-field" class="hidden" />
-      <!-- <recaptcha class="mb-6" /> -->
-      <div data-netlify-recaptcha="true"></div>
+      <div data-netlify-recaptcha="true" class="mb-6"></div>
       <button id="send-it" type="submit">Send</button>
     </form>
   </div>
